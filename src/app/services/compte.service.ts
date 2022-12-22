@@ -11,7 +11,7 @@ import { Compte } from '../models/compte';
 })
 export class CompteService {
 
-  endpoint = 'http://localhost:8090';
+  endpoint = 'http://localhost:8080';
 
 
 
@@ -24,7 +24,7 @@ export class CompteService {
   }
 
   getAll(): Observable<Compte[]> {
-    return this.httpClient.get<Compte[]>(this.endpoint + '/comptes', this.httpOptions)
+    return this.httpClient.get<Compte[]>(this.endpoint + '/compte', this.httpOptions)
         .pipe(
             catchError(this.handleError)
         )

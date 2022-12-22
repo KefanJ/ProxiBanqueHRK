@@ -29,6 +29,7 @@ newClient= new Client;
 
 addClient() {
   this.serviceClient.create(this.newClient).subscribe((data: {}) => {
+    console.log(data)
       this.router.navigate(['/listClients']);
   });
 }

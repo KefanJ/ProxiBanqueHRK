@@ -1,6 +1,6 @@
 export class Compte {
     id:number;
-    numeroCompte:number;
+    numCompte:number;
     solde:number;
     dateOuverture:Date;
    

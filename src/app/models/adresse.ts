@@ -1,5 +1,5 @@
 export class Adresse {
-  numero: string='';
+  codePostal: string='';
   rue: string='';
   ville: string='';
 }

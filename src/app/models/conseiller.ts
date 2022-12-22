@@ -8,6 +8,6 @@ export class Conseiller {
     
     // login: string;
     // password: string;
-    adresse: Adresse={numero:'', rue:'', ville:''};
+    adresse: Adresse={codePostal:'', rue:'', ville:''};
     
 }

@@ -48,8 +48,8 @@
                 <!-- <input type="text" [(ngModel)]="newClient.login" name="login"  class="form-control" placeholder="Login"> -->
 
   
-                    <input type="text" [(ngModel)]="newClient.adresse.numero" name="numero"  class="form-control"
-                        placeholder="numero">
+                    <input type="text" [(ngModel)]="newClient.adresse.codePostal" name="numero"  class="form-control"
+                        placeholder="code postal">
 
 
                     <input type="text" [(ngModel)]="newClient.adresse.rue" name="rue"  class="form-control" placeholder="rue">
@@ -58,11 +58,12 @@
                     <input type="text" [(ngModel)]="newClient.adresse.ville" name="ville"  class="form-control"
                         placeholder="ville">
 
-  
-                        <input type="text" [(ngModel)]="newClient.email" name="email"  class="form-control" placeholder="email">
+                        <input type="text" [(ngModel)]="newClient.telephone" name="telephone"  class="form-control"
+                        placeholder="telephone">
+                        <!-- <input type="text" [(ngModel)]="newClient.email" name="email"  class="form-control" placeholder="email"> -->
 
 
-                <button class="btn btn-success btn-lg btn-block" (click)="addClient()">Update Client</button>
+                <button class="btn btn-success btn-lg btn-block" (click)="addClient()">Create Client</button>
             </div>
         </form>
     </div>

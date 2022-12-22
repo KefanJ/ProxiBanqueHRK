@@ -1,14 +1,15 @@
 import { Adresse } from './adresse';
 import { Compte } from './compte';
 export class Client {
-  id: number=0;
+  id: number;
   nom: string='';
   prenom: string='';
   // login: string='';
   // motDePasse: string='';
-adresse: Adresse={numero:'', rue:'', ville:''};
+adresse: Adresse={codePostal:'', rue:'', ville:''};
 listeCompte:Compte[];
-email: string=''
+//email: string=''
+telephone: string=''
 
 
 }

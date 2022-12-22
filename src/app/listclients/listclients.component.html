@@ -8,20 +8,20 @@
 
   <thead class="bg-info text-center">
     <tr>
-      <th scope="col">Id</th>
+      <!-- <th scope="col">Id</th> -->
       <th scope="col">Nom</th>
       <th scope="col">Prenom</th>
-      <th scope="col">Email</th>
+      <!-- <th scope="col">Email</th> -->
       <th scope="col">Adresse</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let c of listClients">
-      <th scope="row">{{c.id}}</th>
+      <!-- <th scope="row">{{c.id}}</th> -->
       <td>{{c.nom}}</td>
       <td>{{c.prenom}}</td>
-      <td>{{c.email}}</td>
-      <td cellspacing="20">{{c.adresse.numero +' ' + c.adresse.rue + ' ' +c.adresse.ville}}</td>
+      <!-- <td>{{c.email}}</td> -->
+      <td cellspacing="20">{{c.adresse.codePostal+' ' + c.adresse.rue + ' ' +c.adresse.ville}}</td>
      
 
      

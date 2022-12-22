@@ -9,7 +9,7 @@ import { catchError } from "rxjs/operators";
 })
 export class ServiceClientService {
   
-  endpoint = 'http://localhost:8090';
+  endpoint = 'http://localhost:8080';
 
 
   constructor(private httpClient:HttpClient) { }
@@ -40,6 +40,7 @@ export class ServiceClientService {
   //   return this.httpClient.put<Client>(environment.serverUrl + "clients/" + client.id,client)
   // }
   update(id:any, client:Client): Observable<Client> {
+    console.log(JSON.stringify(client))
     return this.httpClient.put<Client>(this.endpoint + '/clients', JSON.stringify(client), this.httpOptions)
         .pipe(
             catchError(this.handleError)
@@ -57,7 +58,7 @@ export class ServiceClientService {
 
 
   getCompteById(id : number){
-    return this.httpClient.get(environment.serverUrl + "clientsComptes/" + id)
+    return this.httpClient.get(environment.serverUrl + "compte/" + id)
   }
   // getById(id : number){
   //   return this.httpClient.get<Client>(environment.serverUrl + "clients/" + id)
@@ -76,6 +77,8 @@ export class ServiceClientService {
 
 
   create(client:Client): Observable<Client> {
+    let clientAngular = {};
+    console.log(JSON.stringify(client))
     return this.httpClient.post<Client>(this.endpoint + '/clients', JSON.stringify(client), this.httpOptions)
         .pipe(
             catchError(this.handleError)

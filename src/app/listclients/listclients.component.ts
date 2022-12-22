@@ -22,7 +22,7 @@ ngOnInit() {
 
 findAll(){
   this.serviceClient.getAll().subscribe((data:any)=>{
-    //console.log(data)
+    console.log(data)
     this.listClients = data;
     //console.log(this.listClients)
   });
